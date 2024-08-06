@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>テンプレート</title>
+    <script src="http://maps.google.com/maps/api/js?key=???
+    &language=ja"></script>
+    <style>
+        .unsei {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .unsei button {
+            cursor: pointer;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .daikichi, .chuukichi, .shoukichi, .kyou {
+            display: none;
+        }
+
+        .daikichi.active, .chuukichi.active, .shoukichi.active, .kyou.active {
+            display: block;
+        }
+
+        
+        html { height: 100% }
+        body { height: 100% }
+        #map { height: 100%; width: 80%}
+    </style>
+    <body>
+        <div id="greet">こんにちは</div>
+        <div id="datetime">ここに日時を表示します</div>
+        <button onclick="datetimeshow()">現在時刻取得</button>
+        <div class="unsei">
+            <div id="omikuji">今日の運勢を占ってみよう</div>
+            <button onclick="omikujishow()">おみくじを引く</button>
+            <div class="daikichi">おめでとう！今日は1日いい日だね！</div>
+            <div class="chuukichi">ラッキー、今日はいいことがあるかも！？</div>
+            <div class="shoukichi">あまり悲観しないで、徳を積めばいいことがあるかも！？</div>
+            <div class="kyou">残念、今日は周りに気を付けて生活しよう。</div>
+        </div>
+        <div id="map"></div>
+        <script src="temp.js"></script>
+    </body>
+</html>
